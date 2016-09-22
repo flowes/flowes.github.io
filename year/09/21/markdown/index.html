@@ -89,14 +89,14 @@
 <meta name="description" content="MARKDOWNWelcome to MarkdownPad 2MarkdownPad is a full-featured Markdown editor for Windows.
 Built exclusively for MarkdownEnjoy first-class Markdown support with easy access to  Markdown syntax and co">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown">
+<meta property="og:title" content="markdown介绍">
 <meta property="og:url" content="https://flowes.github.io/year/09/21/markdown/index.html">
 <meta property="og:site_name" content="haoting's blog">
 <meta property="og:description" content="MARKDOWNWelcome to MarkdownPad 2MarkdownPad is a full-featured Markdown editor for Windows.
 Built exclusively for MarkdownEnjoy first-class Markdown support with easy access to  Markdown syntax and co">
-<meta property="og:updated_time" content="2016-09-21T13:03:37.840Z">
+<meta property="og:updated_time" content="2016-09-21T13:06:47.943Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown">
+<meta name="twitter:title" content="markdown介绍">
 <meta name="twitter:description" content="MARKDOWNWelcome to MarkdownPad 2MarkdownPad is a full-featured Markdown editor for Windows.
 Built exclusively for MarkdownEnjoy first-class Markdown support with easy access to  Markdown syntax and co">
 
@@ -106,7 +106,7 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -121,7 +121,7 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
 
   <link rel="canonical" href="https://flowes.github.io/year/09/21/markdown/"/>
 
-  <title> markdown | haoting's blog </title>
+  <title> markdown介绍 | haoting's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -152,7 +152,7 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,6 +264,16 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
         </li>
       
         
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            给我留言
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-commonweal">
           <a href="/404.html" rel="section">
             
@@ -341,7 +351,7 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
             
             
               
-                markdown
+                markdown介绍
               
             
           </h1>
@@ -393,6 +403,15 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
           
 
           
+          
+             <span id="/year/09/21/markdown/" class="leancloud_visitors" data-flag-title="markdown介绍">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
           
 
           
@@ -482,13 +501,13 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/year/09/21/second/" rel="next" title="初语">
+                <i class="fa fa-chevron-left"></i> 初语
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/year/09/21/second/" rel="prev" title="初语">
-                初语 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -515,7 +534,7 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="year/09/21/markdown/"
-           data-title="markdown" data-url="https://flowes.github.io/year/09/21/markdown/">
+           data-title="markdown介绍" data-url="https://flowes.github.io/year/09/21/markdown/">
       </div>
     
   </div>
@@ -831,10 +850,117 @@ Built exclusively for MarkdownEnjoy first-class Markdown support with easy acces
       }
     });
   </script>
-  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src=""></script>
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("HAkKj61Rs6FctTGnBPJ4Y2wD-gzGzoHsz", "2OjJ3aSR1GoactHj7uLioFKt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
